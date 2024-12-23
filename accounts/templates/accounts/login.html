@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% block title %}
+	ورود کاربر
+{% endblock %}
+{% block body %}
+	<form method="post">
+
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        <input type="text" name="user" placeholder="نام کاربری ...">
+        <input type="password" name="password" placeholder="رمز عبور ...">
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}
